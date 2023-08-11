@@ -140,7 +140,7 @@ resource "aws_db_instance" "this" {
 
   lifecycle {
     ignore_changes = [
-      master_password, // NOTE: Secret is managed externally
+      password, // NOTE: Remove once all DBs migrated to RDS secrets management
     ]
   }
 
